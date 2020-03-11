@@ -8,7 +8,9 @@ import { products } from '../products';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-product;
+addToCart(product) {
+  this.cartService.addToCart(product);
+}
 
   constructor(
     private route: ActivatedRoute,
